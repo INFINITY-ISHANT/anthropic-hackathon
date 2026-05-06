@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { api, type IngestionStatusOut, type IngestionRunOut, type SourceOut, timeAgo } from "@/lib/api";
 
 const STATUS_COLOR: Record<string, string> = {
@@ -219,18 +219,29 @@ function RunsTable({ runs, sources }: { runs: IngestionRunOut[]; sources: Source
       </thead>
       <tbody className="divide-y divide-paper-line/70">
         {runs.map((r) => (
-          <tr key={r.id}>
-            <td className="py-2 pr-4 font-mono text-xs">{sourceById[r.source_id]?.slug ?? `#${r.source_id}`}</td>
-            <td className="py-2 pr-4 font-mono text-xs text-ink-muted">{timeAgo(r.started_at)}</td>
-            <td className={`py-2 pr-4 text-xs uppercase tracking-wideish font-medium ${STATUS_COLOR[r.status] ?? "text-ink-muted"}`}>
-              {r.status}
-            </td>
-            <td className="py-2 pr-4 text-right font-mono">{r.fetched_count}</td>
-            <td className="py-2 pr-4 text-right font-mono">{r.new_count}</td>
-            <td className="py-2 pr-4 text-right font-mono">
-              {r.error_count > 0 ? <span className="text-saffron">{r.error_count}</span> : "0"}
-            </td>
-          </tr>
+          <Fragment key={r.id}>
+            <tr key={r.id}>
+              <td className="py-2 pr-4 font-mono text-xs">{sourceById[r.source_id]?.slug ?? `#${r.source_id}`}</td>
+              <td className="py-2 pr-4 font-mono text-xs text-ink-muted">{timeAgo(r.started_at)}</td>
+              <td className={`py-2 pr-4 text-xs uppercase tracking-wideish font-medium ${STATUS_COLOR[r.status] ?? "text-ink-muted"}`}>
+                {r.status}
+              </td>
+              <td className="py-2 pr-4 text-right font-mono">{r.fetched_count}</td>
+              <td className="py-2 pr-4 text-right font-mono">{r.new_count}</td>
+              <td className="py-2 pr-4 text-right font-mono">
+                {r.error_count > 0 ? <span className="text-saffron">{r.error_count}</span> : "0"}
+              </td>
+            </tr>
+            {r.log_text && r.error_count > 0 && (
+              <tr>
+                <td colSpan={6} className="pb-4 pt-1">
+                  <pre className="whitespace-pre-wrap text-[11px] leading-relaxed bg-paper-deep/70 border border-paper-line rounded-sm p-3 text-ink-soft overflow-x-auto">
+                    {r.log_text}
+                  </pre>
+                </td>
+              </tr>
+            )}
+          </Fragment>
         ))}
       </tbody>
     </table>

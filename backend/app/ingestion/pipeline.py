@@ -80,6 +80,7 @@ def _run_for_source(db: Session, source: Source) -> dict:
                 errors += 1
                 logger.warning("Item failed for source %s: %s", source.slug, e)
                 log_lines.append(f"ERROR on {item.get('source_url')}: {e}")
+                log_lines.append(traceback.format_exc())
 
         run.status = "success" if errors == 0 else "partial"
         source.last_fetched_at = datetime.now(timezone.utc)

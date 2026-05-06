@@ -195,6 +195,7 @@ class IngestionRunOut(ORMModel):
     fetched_count: int
     new_count: int
     error_count: int
+    log_text: str | None = None
 
 
 class IngestionStatusOut(BaseModel):

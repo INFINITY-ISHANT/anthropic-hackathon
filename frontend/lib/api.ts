@@ -228,6 +228,7 @@ export interface IngestionRunOut {
   fetched_count: number;
   new_count: number;
   error_count: number;
+  log_text?: string | null;
 }
 
 export interface IngestionStatusOut {
