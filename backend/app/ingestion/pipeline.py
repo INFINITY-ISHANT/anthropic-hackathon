@@ -190,14 +190,16 @@ def _ingest_one(db: Session, source: Source, item: dict) -> bool:
     # Step 5: summarize EN (always) + HI (best-effort)
     try:
         en = summarizer.summarize(title, extracted_text or "", language="en")
-        db.add(Summary(document_id=doc.id, source_citation=source_url, **en))
+        en_payload = {k: v for k, v in en.items() if k != "_model"}
+        db.add(Summary(document_id=doc.id, source_citation=source_url, **en_payload))
         confidences.append(en["confidence_score"])
     except Exception as e:
         logger.warning("EN summary failed for doc %s: %s", doc.id, e)
 
     try:
         hi = summarizer.summarize(title, extracted_text or "", language="hi")
-        db.add(Summary(document_id=doc.id, source_citation=source_url, **hi))
+        hi_payload = {k: v for k, v in hi.items() if k != "_model"}
+        db.add(Summary(document_id=doc.id, source_citation=source_url, **hi_payload))
     except Exception as e:
         logger.info("HI summary skipped for doc %s: %s", doc.id, e)
 
