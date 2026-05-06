@@ -1,4 +1,7 @@
-Vercel deployment-https://anthropic-hackathon-8te5qrj23-ishants-projects-2a09f545.vercel.app/
+# Most imporatant 
+- Vercel deployment(frontend)-https://anthropic-hackathon-8te5qrj23-ishants-projects-2a09f545.vercel.app/
+- Backend deployed on render
+- postgre database deployed on neon
 
 
 # Nagarik
