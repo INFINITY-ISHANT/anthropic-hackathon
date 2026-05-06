@@ -1,11 +1,8 @@
 # Nagarik
 
-A nonpartisan civic intelligence platform for India. Ingests official Indian
-government and election-related sources, decodes dense documents into plain-language
-summaries, maps them to constituencies and issues, and presents them in a citizen-first
-portal with full source traceability.
+Nagarik is a nonpartisan civic intelligence platform designed to make governance understandable, accessible, and accountable for every Indian citizen.The platform transforms dense government documents, political claims, policy announcements, and civic information into clear, plain-language insights backed by verifiable public sources.
 
-> **One-line pitch:** Government decisions, decoded for the people they affect — every claim links back to its source.
+From decoding government circulars and fact-checking political claims to helping citizens understand their rights and report local civic issues, Nagarik uses AI to bridge the gap between citizens and institutions — without replacing human judgment. Every output is transparent, source-linked, confidence-scored, and designed to empower informed democratic participation.
 
 The complete design is documented in [`ARCHITECTURE.md`](./ARCHITECTURE.md). Read that first.
 
@@ -69,8 +66,6 @@ curl http://localhost:8000/api/v1/updates | python -m json.tool
 curl http://localhost:8000/healthz
 ```
 
-OpenAPI docs are at `http://localhost:8000/docs`.
-
 ### 2. Frontend
 
 ```bash
@@ -90,7 +85,7 @@ Without an API key the system uses a rule-based fallback for classification, ext
 summarization, and topic mapping. Quality is intentionally modest and confidence stays
 low so the UI flags it as `tentative`.
 
-To switch on Claude:
+Add your API key to the project by creating a .env file and inserting the generated key in the required environment variable.
 
 ```bash
 # backend/.env
