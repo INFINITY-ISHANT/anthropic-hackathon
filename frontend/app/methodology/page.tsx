@@ -4,12 +4,6 @@ export const dynamic = "force-static";
 
 const SOURCES = [
   { name: "Press Information Bureau", url: "https://pib.gov.in" },
-  { name: "PRS Legislative Research", url: "https://prsindia.org" },
-  { name: "Election Commission of India", url: "https://eci.gov.in" },
-  { name: "Lok Sabha", url: "https://sansad.in" },
-  { name: "Comptroller and Auditor General", url: "https://cag.gov.in" },
-  { name: "India Budget", url: "https://www.indiabudget.gov.in" },
-  { name: "MyNeta (affidavit data)", url: "https://myneta.info" },
 ];
 
 export default function MethodologyPage() {
@@ -60,31 +54,6 @@ export default function MethodologyPage() {
             <li><strong>Map</strong> the document to its constituency, district, state, and topic tags — only when explicitly named.</li>
             <li><strong>Publish.</strong> Audit-logged. Raw payload is preserved so future re-runs with better prompts can re-summarize without re-fetching.</li>
           </ol>
-        </section>
-
-        <section className="border-t border-paper-line pt-10">
-          <h2 className="font-display text-2xl font-semibold tracking-tightish">How manifesto promises are classified</h2>
-          <dl className="mt-4 space-y-4 text-ink-soft leading-relaxed">
-            <div>
-              <dt className="font-semibold text-ink"><span className="inline-block w-2 h-2 rounded-full bg-green mr-2 align-middle" />Achieved</dt>
-              <dd className="mt-1">Verified by official government record or CAG audit.</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-ink"><span className="inline-block w-2 h-2 rounded-full bg-ashoka mr-2 align-middle" />In Progress</dt>
-              <dd className="mt-1">Scheme or project announced and publicly funded but target not yet met.</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-ink"><span className="inline-block w-2 h-2 rounded-full bg-paper-line border border-ink/30 mr-2 align-middle" />Promised</dt>
-              <dd className="mt-1">Stated in pre-election manifesto, no significant implementation recorded.</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-ink"><span className="inline-block w-2 h-2 rounded-full bg-saffron mr-2 align-middle" />Broken</dt>
-              <dd className="mt-1">Explicitly contradicted by official record or time-expired without action.</dd>
-            </div>
-          </dl>
-          <p className="mt-5 text-sm text-ink-muted italic">
-            No status is assigned without a source citation.
-          </p>
         </section>
 
         <section className="border-t border-paper-line pt-10">
