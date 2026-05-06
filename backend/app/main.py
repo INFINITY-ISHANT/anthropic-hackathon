@@ -50,17 +50,15 @@ async def lifespan(app: FastAPI):
     # Idempotent: creates tables + seeds reference data on every boot.
     seed_all()
 
-    # First-boot bootstrap: if the DB is empty, seed demo content immediately.
+    # First-boot bootstrap: if the DB is empty, trigger ingestion in background.
+    # Never block startup here, or hosts like Render may fail health checks
+    # before the app binds to PORT.
     try:
         with SessionLocal() as db:
             doc_count = db.execute(select(func.count()).select_from(Document)).scalar_one()
         if doc_count == 0:
-            if settings.enable_scheduler:
-                logger.info("Empty DB on boot — triggering initial ingestion in background")
-                threading.Thread(target=run_all, name="initial-ingest", daemon=True).start()
-            else:
-                logger.info("Empty DB on boot — running initial ingestion synchronously")
-                run_all()
+            logger.info("Empty DB on boot — triggering initial ingestion in background")
+            threading.Thread(target=run_all, name="initial-ingest", daemon=True).start()
         else:
             logger.info("DB already has %d documents — skipping initial ingestion", doc_count)
     except Exception:
