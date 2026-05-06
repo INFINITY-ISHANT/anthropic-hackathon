@@ -1,6 +1,6 @@
 # Nagarik — Architecture
 
-A nonpartisan civic intelligence platform for India. This document is the design contract that the code in `backend/` and `frontend/` implements. Read this first.
+ This document is the design contract that the code in `backend/` and `frontend/` implements.
 
 ---
 
