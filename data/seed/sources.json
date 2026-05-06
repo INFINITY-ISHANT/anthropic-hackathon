@@ -1,0 +1,148 @@
+[
+  {
+    "name": "Mock Demo Source",
+    "slug": "mock-demo",
+    "source_type": "central_gov",
+    "trust_label": "official",
+    "base_url": "https://example.gov.in/mock",
+    "adapter_key": "mock",
+    "config_json": {},
+    "active": true
+  },
+  {
+    "name": "Press Information Bureau",
+    "slug": "pib",
+    "source_type": "central_gov",
+    "trust_label": "official",
+    "base_url": "https://www.pib.gov.in",
+    "adapter_key": "pib",
+    "config_json": {
+      "listing_url": "https://www.pib.gov.in/allRel.aspx?reg=3&lang=1",
+      "max_items": 25
+    },
+    "active": true
+  },
+  {
+    "name": "PM India",
+    "slug": "pmindia",
+    "source_type": "central_gov",
+    "trust_label": "official",
+    "base_url": "https://www.pmindia.gov.in",
+    "adapter_key": "rss_generic",
+    "config_json": {
+      "feed_url": "https://www.pmindia.gov.in/en/feed/",
+      "max_items": 15
+    },
+    "active": false
+  },
+  {
+    "name": "India Budget",
+    "slug": "indiabudget",
+    "source_type": "central_gov",
+    "trust_label": "official",
+    "base_url": "https://www.indiabudget.gov.in",
+    "adapter_key": "rss_generic",
+    "config_json": {
+      "feed_url": "https://www.indiabudget.gov.in/rss.xml",
+      "fallback_url": "https://www.indiabudget.gov.in/",
+      "max_items": 10
+    },
+    "active": false
+  },
+  {
+    "name": "Ministry of Finance",
+    "slug": "finmin",
+    "source_type": "central_gov",
+    "trust_label": "official",
+    "base_url": "https://finmin.nic.in",
+    "adapter_key": "rss_generic",
+    "config_json": {
+      "feed_url": "https://finmin.nic.in/rss.xml",
+      "fallback_url": "https://dea.gov.in/rss.xml",
+      "max_items": 10
+    },
+    "active": false
+  },
+  {
+    "name": "Election Commission of India",
+    "slug": "eci-news",
+    "source_type": "eci",
+    "trust_label": "official",
+    "base_url": "https://eci.gov.in",
+    "adapter_key": "rss_generic",
+    "config_json": {
+      "feed_url": "https://eci.gov.in/rss/",
+      "max_items": 15
+    },
+    "active": false
+  },
+  {
+    "name": "Lok Sabha",
+    "slug": "loksabha",
+    "source_type": "parliament",
+    "trust_label": "official",
+    "base_url": "https://loksabhaph.nic.in",
+    "adapter_key": "rss_generic",
+    "config_json": {
+      "feed_url": "https://loksabhaph.nic.in/rss/latestnews.rss",
+      "max_items": 15
+    },
+    "active": false
+  },
+  {
+    "name": "Legislative Department",
+    "slug": "legislative",
+    "source_type": "parliament",
+    "trust_label": "official",
+    "base_url": "https://legislative.gov.in",
+    "adapter_key": "rss_generic",
+    "config_json": {
+      "feed_url": "https://legislative.gov.in/rss.xml",
+      "max_items": 10
+    },
+    "active": false
+  },
+  {
+    "name": "PRS Legislative Research",
+    "slug": "prsindia",
+    "source_type": "parliament",
+    "trust_label": "third_party",
+    "base_url": "https://prsindia.org",
+    "adapter_key": "rss_generic",
+    "config_json": {
+      "feed_url": "https://prsindia.org/feed",
+      "max_items": 15
+    },
+    "active": false
+  },
+  {
+    "name": "MyNeta Affidavits",
+    "slug": "myneta",
+    "source_type": "eci",
+    "trust_label": "official",
+    "base_url": "https://myneta.info",
+    "adapter_key": "myneta",
+    "config_json": { "candidate_urls": [] },
+    "active": false
+  },
+  {
+    "name": "Election Commission Affidavits (manifest)",
+    "slug": "eci-affidavits",
+    "source_type": "eci",
+    "trust_label": "official",
+    "base_url": "https://eci.gov.in",
+    "adapter_key": "eci_affidavits",
+    "config_json": {},
+    "active": false
+  },
+  {
+    "name": "Delhi Government Press Releases",
+    "slug": "delhi-gov-press",
+    "source_type": "local_gov",
+    "trust_label": "official",
+    "base_url": "https://delhi.gov.in",
+    "adapter_key": "delhi_gov_local",
+    "config_json": { "item_selector": "a.press-release-link", "max_items": 15 },
+    "active": false
+  }
+]

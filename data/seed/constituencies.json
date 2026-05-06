@@ -1,0 +1,81 @@
+[
+  { "name": "New Delhi", "type": "lok_sabha", "number": 2, "state_code": "DL", "district_name": "New Delhi" },
+  { "name": "Chandni Chowk", "type": "lok_sabha", "number": 1, "state_code": "DL", "district_name": "Central Delhi" },
+  { "name": "South Delhi", "type": "lok_sabha", "number": 6, "state_code": "DL", "district_name": "South Delhi" },
+  { "name": "North East Delhi", "type": "lok_sabha", "number": 3, "state_code": "DL", "district_name": "East Delhi" },
+  { "name": "North West Delhi", "type": "lok_sabha", "number": 4, "state_code": "DL", "district_name": "North Delhi" },
+  { "name": "East Delhi", "type": "lok_sabha", "number": 5, "state_code": "DL", "district_name": "East Delhi" },
+  { "name": "West Delhi", "type": "lok_sabha", "number": 7, "state_code": "DL", "district_name": "North Delhi" },
+
+  { "name": "Mumbai South", "type": "lok_sabha", "state_code": "MH", "district_name": "Mumbai City" },
+  { "name": "Mumbai North", "type": "lok_sabha", "state_code": "MH", "district_name": "Mumbai Suburban" },
+  { "name": "Mumbai North Central", "type": "lok_sabha", "state_code": "MH", "district_name": "Mumbai Suburban" },
+  { "name": "Pune", "type": "lok_sabha", "state_code": "MH", "district_name": "Pune" },
+  { "name": "Nagpur", "type": "lok_sabha", "state_code": "MH", "district_name": "Nagpur" },
+
+  { "name": "Bangalore South", "type": "lok_sabha", "state_code": "KA", "district_name": "Bengaluru Urban" },
+  { "name": "Bangalore North", "type": "lok_sabha", "state_code": "KA", "district_name": "Bengaluru Urban" },
+  { "name": "Bangalore Central", "type": "lok_sabha", "state_code": "KA", "district_name": "Bengaluru Urban" },
+  { "name": "Mysore", "type": "lok_sabha", "state_code": "KA", "district_name": "Mysuru" },
+
+  { "name": "Chennai South", "type": "lok_sabha", "state_code": "TN", "district_name": "Chennai" },
+  { "name": "Chennai North", "type": "lok_sabha", "state_code": "TN", "district_name": "Chennai" },
+  { "name": "Chennai Central", "type": "lok_sabha", "state_code": "TN", "district_name": "Chennai" },
+  { "name": "Coimbatore", "type": "lok_sabha", "state_code": "TN", "district_name": "Coimbatore" },
+
+  { "name": "Hyderabad", "type": "lok_sabha", "state_code": "TG", "district_name": "Hyderabad" },
+  { "name": "Secunderabad", "type": "lok_sabha", "state_code": "TG", "district_name": "Hyderabad" },
+
+  { "name": "Kolkata Uttar", "type": "lok_sabha", "state_code": "WB", "district_name": "Kolkata" },
+  { "name": "Kolkata Dakshin", "type": "lok_sabha", "state_code": "WB", "district_name": "Kolkata" },
+  { "name": "Howrah", "type": "lok_sabha", "state_code": "WB", "district_name": "Howrah" },
+
+  { "name": "Lucknow", "type": "lok_sabha", "state_code": "UP", "district_name": "Lucknow" },
+  { "name": "Varanasi", "type": "lok_sabha", "state_code": "UP", "district_name": "Varanasi" },
+  { "name": "Allahabad", "type": "lok_sabha", "state_code": "UP", "district_name": "Allahabad" },
+
+  { "name": "Patna Sahib", "type": "lok_sabha", "state_code": "BR", "district_name": "Patna" },
+  { "name": "Pataliputra", "type": "lok_sabha", "state_code": "BR", "district_name": "Patna" },
+
+  { "name": "Ahmedabad East", "type": "lok_sabha", "state_code": "GJ", "district_name": "Ahmedabad" },
+  { "name": "Ahmedabad West", "type": "lok_sabha", "state_code": "GJ", "district_name": "Ahmedabad" },
+  { "name": "Surat", "type": "lok_sabha", "state_code": "GJ", "district_name": "Surat" },
+  { "name": "Vadodara", "type": "lok_sabha", "state_code": "GJ", "district_name": "Vadodara" },
+
+  { "name": "Jaipur", "type": "lok_sabha", "state_code": "RJ", "district_name": "Jaipur" },
+  { "name": "Jodhpur", "type": "lok_sabha", "state_code": "RJ", "district_name": "Jodhpur" },
+
+  { "name": "Bhopal", "type": "lok_sabha", "state_code": "MP", "district_name": "Bhopal" },
+  { "name": "Indore", "type": "lok_sabha", "state_code": "MP", "district_name": "Indore" },
+
+  { "name": "Thiruvananthapuram", "type": "lok_sabha", "state_code": "KL", "district_name": "Thiruvananthapuram" },
+  { "name": "Ernakulam", "type": "lok_sabha", "state_code": "KL", "district_name": "Ernakulam" },
+  { "name": "Kozhikode", "type": "lok_sabha", "state_code": "KL", "district_name": "Kozhikode" },
+
+  { "name": "Bhubaneswar", "type": "lok_sabha", "state_code": "OR", "district_name": "Bhubaneswar" },
+  { "name": "Cuttack", "type": "lok_sabha", "state_code": "OR", "district_name": "Cuttack" },
+
+  { "name": "Guwahati", "type": "lok_sabha", "state_code": "AS", "district_name": "Guwahati" },
+  { "name": "Ranchi", "type": "lok_sabha", "state_code": "JH", "district_name": "Ranchi" },
+  { "name": "Raipur", "type": "lok_sabha", "state_code": "CT", "district_name": "Raipur" },
+  { "name": "Chandigarh", "type": "lok_sabha", "state_code": "CH", "district_name": "Chandigarh" },
+  { "name": "Amritsar", "type": "lok_sabha", "state_code": "PB", "district_name": "Amritsar" },
+  { "name": "Ludhiana", "type": "lok_sabha", "state_code": "PB", "district_name": "Ludhiana" },
+  { "name": "Gurgaon", "type": "lok_sabha", "state_code": "HR", "district_name": "Gurugram" },
+  { "name": "Shimla", "type": "lok_sabha", "state_code": "HP", "district_name": "Shimla" },
+  { "name": "Hardwar", "type": "lok_sabha", "state_code": "UT", "district_name": "Dehradun" },
+  { "name": "Srinagar", "type": "lok_sabha", "state_code": "JK", "district_name": "Srinagar" },
+  { "name": "North Goa", "type": "lok_sabha", "state_code": "GA", "district_name": "Panaji" },
+  { "name": "South Goa", "type": "lok_sabha", "state_code": "GA", "district_name": "Panaji" },
+  { "name": "Tripura West", "type": "lok_sabha", "state_code": "TR", "district_name": "Agartala" },
+  { "name": "Inner Manipur", "type": "lok_sabha", "state_code": "MN", "district_name": "Imphal" },
+  { "name": "Arunachal West", "type": "lok_sabha", "state_code": "AR", "district_name": "Itanagar" },
+  { "name": "Mizoram", "type": "lok_sabha", "state_code": "MZ", "district_name": "Aizawl" },
+  { "name": "Nagaland", "type": "lok_sabha", "state_code": "NL", "district_name": "Kohima" },
+  { "name": "Shillong", "type": "lok_sabha", "state_code": "ML", "district_name": "Shillong" },
+  { "name": "Sikkim", "type": "lok_sabha", "state_code": "SK", "district_name": "Gangtok" },
+  { "name": "Puducherry", "type": "lok_sabha", "state_code": "PY", "district_name": "Puducherry" },
+  { "name": "Andaman & Nicobar Islands", "type": "lok_sabha", "state_code": "AN", "district_name": "Port Blair" },
+  { "name": "Ladakh", "type": "lok_sabha", "state_code": "LA", "district_name": "Leh" },
+  { "name": "Vishakhapatnam", "type": "lok_sabha", "state_code": "AP" }
+]

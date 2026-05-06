@@ -1,0 +1,84 @@
+[
+  {
+    "politician_name": "Demo Candidate One",
+    "party": "Demo Party Alpha",
+    "title": "Upgrade three primary health centres in the constituency",
+    "description": "Promised an upgrade of three identified primary health centres to 24x7 facilities by 2026. PIB notification dated April 2025 confirmed funding allocation; first centre operational from August 2025.",
+    "category": "health",
+    "target_year": 2026,
+    "status": "in_progress",
+    "confidence": 0.7
+  },
+  {
+    "politician_name": "Demo Candidate One",
+    "party": "Demo Party Alpha",
+    "title": "Add 50 new electric buses on local routes",
+    "description": "Pledge to add 50 e-buses to existing local route network within the term. Procurement tender issued; deliveries pending.",
+    "category": "transport",
+    "target_year": 2027,
+    "status": "promised",
+    "confidence": 0.6
+  },
+  {
+    "politician_name": "Demo Candidate One",
+    "party": "Demo Party Alpha",
+    "title": "Free water connection to every household in unauthorised colonies",
+    "description": "Delhi Jal Board scheme extending Rs 100 connection fee. Notification dated 22 April 2025 — implementation window open.",
+    "category": "water-sanitation",
+    "target_year": 2025,
+    "status": "achieved",
+    "confidence": 0.75
+  },
+  {
+    "politician_name": "Demo Candidate One",
+    "party": "Demo Party Alpha",
+    "title": "Open 10 new municipal primary schools",
+    "description": "Manifesto commitment to open 10 new schools by 2024. As of April 2025, no schools have been formally inaugurated; budget line item dropped from FY25-26.",
+    "category": "education",
+    "target_year": 2024,
+    "status": "broken",
+    "confidence": 0.55
+  },
+
+  {
+    "politician_name": "Demo Candidate Two",
+    "party": "Demo Party Bravo",
+    "title": "Free wi-fi at every government school",
+    "description": "Promise to install free, supervised wi-fi at all government schools in the constituency. Government of Delhi guidelines released 10 April 2025.",
+    "category": "education",
+    "target_year": 2026,
+    "status": "in_progress",
+    "confidence": 0.6
+  },
+  {
+    "politician_name": "Demo Candidate Two",
+    "party": "Demo Party Bravo",
+    "title": "Skill-training stipend for unemployed youth",
+    "description": "Monthly stipend of Rs 5,000 for skill training. No formal scheme notification yet.",
+    "category": "employment",
+    "target_year": 2026,
+    "status": "promised",
+    "confidence": 0.5
+  },
+
+  {
+    "politician_name": "Demo Candidate Three",
+    "party": "Demo Party Charlie",
+    "title": "Air quality monitoring at every ward",
+    "description": "Install ward-level PM2.5 monitors with public dashboards. Delhi Government + CPCB scheme approved 10 March 2025; procurement deadline 30 April 2025.",
+    "category": "air-quality",
+    "target_year": 2025,
+    "status": "in_progress",
+    "confidence": 0.65
+  },
+  {
+    "politician_name": "Demo Candidate Three",
+    "party": "Demo Party Charlie",
+    "title": "Plant 1 lakh trees in the constituency",
+    "description": "Pre-election promise to plant 1 lakh trees within the term.",
+    "category": "air-quality",
+    "target_year": 2027,
+    "status": "promised",
+    "confidence": 0.4
+  }
+]
