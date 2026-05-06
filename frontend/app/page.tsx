@@ -9,14 +9,32 @@ interface PageProps {
   searchParams?: { q?: string; lang?: string };
 }
 
+function getIstTodayStart(): string {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+
+  const year = parts.find((part) => part.type === "year")?.value ?? "1970";
+  const month = parts.find((part) => part.type === "month")?.value ?? "01";
+  const day = parts.find((part) => part.type === "day")?.value ?? "01";
+  return `${year}-${month}-${day}T00:00:00+05:30`;
+}
+
 export default async function HomePage({ searchParams }: PageProps) {
   const q = searchParams?.q?.trim();
   const lang: "en" | "hi" = searchParams?.lang === "hi" ? "hi" : "en";
+  const todayStart = getIstTodayStart();
 
-  const [updates, constituencies, sources] = await Promise.all([
+  const [updates, allTodayUpdates, constituencies, sources] = await Promise.all([
     q
       ? api.search(q).then((items) => ({ items, total: items.length, page: 1, page_size: items.length })).catch(() => ({ items: [], total: 0, page: 1, page_size: 0 }))
       : api.updates({ page_size: 12 }).catch(() => ({ items: [], total: 0, page: 1, page_size: 0 })),
+    q
+      ? Promise.resolve({ items: [], total: 0, page: 1, page_size: 0 })
+      : api.updates({ from: todayStart, page_size: 5 }).catch(() => ({ items: [], total: 0, page: 1, page_size: 0 })),
     api.constituencies().catch(() => []),
     api.sources().catch(() => []),
   ]);
@@ -139,6 +157,32 @@ export default async function HomePage({ searchParams }: PageProps) {
                 </div>
               )}
             </aside>
+          </div>
+        )}
+
+        {!q && allTodayUpdates.total > 0 && (
+          <div className="mt-14 border-t border-paper-line pt-10">
+            <div className="flex items-end justify-between mb-6 gap-4">
+              <div>
+                <p className="label-caps mb-2">All updates till now</p>
+                <h3 className="font-display text-2xl font-semibold">
+                  Everything published today
+                </h3>
+              </div>
+              <Link href="/updates/today" className="text-xs uppercase tracking-wideish text-ashoka hover:text-ashoka-deep whitespace-nowrap">
+                View full list →
+              </Link>
+            </div>
+
+            <div className="space-y-6">
+              {allTodayUpdates.items.map((item) => (
+                <UpdateCard key={item.id} item={item} lang={lang} />
+              ))}
+            </div>
+
+            <p className="mt-4 text-xs text-ink-muted">
+              Showing {allTodayUpdates.items.length} of {allTodayUpdates.total} updates published today.
+            </p>
           </div>
         )}
       </section>
