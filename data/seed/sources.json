@@ -7,7 +7,7 @@
     "base_url": "https://example.gov.in/mock",
     "adapter_key": "mock",
     "config_json": {},
-    "active": true
+    "active": false
   },
   {
     "name": "Press Information Bureau",
@@ -18,7 +18,7 @@
     "adapter_key": "pib",
     "config_json": {
       "listing_url": "https://www.pib.gov.in/allRel.aspx?reg=3&lang=1",
-      "max_items": 5
+      "max_items": 100
     },
     "active": true
   },
