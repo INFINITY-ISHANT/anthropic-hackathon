@@ -39,7 +39,6 @@ export default async function HomePage({ searchParams }: PageProps) {
     api.sources().catch(() => []),
   ]);
 
-  const featured = constituencies[0];
   const lede = updates.items[0];
   const rest = updates.items.slice(1);
   const activeSources = sources.filter((s) => s.active).length;
@@ -105,58 +104,13 @@ export default async function HomePage({ searchParams }: PageProps) {
         )}
 
         {lede && (
-          <div className="grid md:grid-cols-3 gap-x-10 gap-y-10">
-            {/* Lede on the left, two columns wide */}
-            <div className="md:col-span-2">
-              <UpdateCard item={lede} variant="lede" lang={lang} />
-              <div className="mt-10 space-y-8">
-                {rest.slice(0, 4).map((u) => (
-                  <UpdateCard key={u.id} item={u} lang={lang} />
-                ))}
-              </div>
+          <div>
+            <UpdateCard item={lede} variant="lede" lang={lang} />
+            <div className="mt-10 space-y-8">
+              {rest.slice(0, 4).map((u) => (
+                <UpdateCard key={u.id} item={u} lang={lang} />
+              ))}
             </div>
-
-            {/* Sidebar: featured constituency + secondary updates */}
-            <aside className="md:col-span-1 md:border-l md:border-paper-line md:pl-8 space-y-10">
-              {featured && (
-                <div>
-                  <p className="label-caps mb-2">Featured constituency</p>
-                  <Link href={`/constituencies/${featured.id}`} className="block group">
-                    <h4 className="font-display font-semibold text-2xl group-hover:text-ashoka transition-colors">
-                      {featured.name}
-                    </h4>
-                    <p className="text-xs text-ink-muted mt-1 uppercase tracking-wideish">
-                      {featured.type === "lok_sabha" ? "Lok Sabha" : "Vidhan Sabha"}
-                      {featured.number ? ` · PC ${featured.number}` : ""}
-                    </p>
-                  </Link>
-                  <p className="mt-3 text-sm text-ink-soft leading-relaxed">
-                    See recent government updates mapped to this constituency, candidate
-                    information, and aggregated citizen feedback.
-                  </p>
-                </div>
-              )}
-
-              {rest.length > 4 && (
-                <div className="border-t border-paper-line pt-6">
-                  <p className="label-caps mb-4">Also today</p>
-                  <ul className="space-y-4">
-                    {rest.slice(4, 9).map((u) => (
-                      <li key={u.id}>
-                        <Link href={`/updates/${u.id}`} className="block group">
-                          <p className="font-display text-base leading-snug group-hover:text-ashoka transition-colors">
-                            {u.title}
-                          </p>
-                          <p className="text-[11px] text-ink-muted mt-1 uppercase tracking-wideish">
-                            {u.source_name}
-                          </p>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </aside>
           </div>
         )}
 
@@ -173,16 +127,6 @@ export default async function HomePage({ searchParams }: PageProps) {
                 View full list →
               </Link>
             </div>
-
-            <div className="space-y-6">
-              {allTodayUpdates.items.map((item) => (
-                <UpdateCard key={item.id} item={item} lang={lang} />
-              ))}
-            </div>
-
-            <p className="mt-4 text-xs text-ink-muted">
-              Showing {allTodayUpdates.items.length} of {allTodayUpdates.total} updates published today.
-            </p>
           </div>
         )}
       </section>

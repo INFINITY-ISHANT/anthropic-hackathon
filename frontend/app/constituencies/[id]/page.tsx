@@ -220,31 +220,8 @@ export default async function ConstituencyDetailPage({ params }: PageProps) {
 
         {/* Sidebar */}
         <aside className="md:col-span-1 md:border-l md:border-paper-line md:pl-8 space-y-10">
-          {/* Candidates */}
-          <div>
-            <p className="label-caps mb-4">Candidates</p>
-            {c.candidates.length === 0 ? (
-              <p className="text-sm text-ink-muted">None on record.</p>
-            ) : (
-              <ul className="space-y-4">
-                {c.candidates.map((cand) => (
-                  <li key={cand.id} className="border-b border-paper-line/70 pb-3 last:border-0">
-                    <Link href={`/candidates/${cand.politician.id}`} className="group block">
-                      <p className="font-display text-lg font-semibold group-hover:text-ashoka transition-colors">
-                        {cand.politician.name}
-                      </p>
-                      <p className="text-xs text-ink-muted">
-                        {cand.politician.party} · contesting {cand.election_year}
-                      </p>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
           {/* Top issues */}
-          <div className="border-t border-paper-line pt-6">
+          <div>
             <p className="label-caps mb-4">Top issues</p>
             {c.top_topics.length === 0 ? (
               <p className="text-sm text-ink-muted">
