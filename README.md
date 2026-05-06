@@ -1,3 +1,6 @@
+Vercel deployment-https://anthropic-hackathon-8te5qrj23-ishants-projects-2a09f545.vercel.app/
+
+
 # Nagarik
 
 Nagarik is a nonpartisan civic intelligence platform designed to make governance understandable, accessible, and accountable for every Indian citizen.The platform transforms dense government documents, political claims, policy announcements, and civic information into clear, plain-language insights backed by verifiable public sources.
